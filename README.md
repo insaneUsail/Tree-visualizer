@@ -1,16 +1,67 @@
-# React + Vite
+# 🌳 Tree Visualizer
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A lightweight, interactive Organization Chart / Tree visualization built with **React** and **pure CSS**.
 
-Currently, two official plugins are available:
+This project renders hierarchical data structures into a clean, collapsible tree view. It uses recursive rendering and standard CSS pseudo-elements (`::before` and `::after`) to draw connecting lines automatically, ensuring a responsive UI without heavy charting libraries.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+## ✨ Features
 
-## React Compiler
+* **Recursive Rendering:** Can handle deep nesting (Root → Child → Grandchild).
+* **Interactive:** Click nodes to Expand (+) or Collapse (-) branches.
+* **Pure CSS Connectors:** Uses CSS for all linking lines (no SVG/Canvas required).
+* **Responsive:** Handles wide trees with automatic horizontal scrolling.
+* **Vite-Powered:** Fast development and optimized build process.
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## 🛠️ Tech Stack
 
-## Expanding the ESLint configuration
+* **React** (Functional Components + Hooks)
+* **Vite** (Build Tool)
+* **CSS3** (Flexbox, Pseudo-elements)
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## 🚀 Getting Started
+
+Follow these steps to run the project locally.
+
+### Prerequisites
+
+* Node.js installed (v14 or higher)
+
+### Installation
+
+1.  **Clone the repository:**
+    ```bash
+    git clone [https://github.com/your-username/tree-visualizer.git](https://github.com/your-username/tree-visualizer.git)
+    cd Tree-visualizer
+    ```
+
+2.  **Install dependencies:**
+    ```bash
+    npm install
+    ```
+
+3.  **Start the development server:**
+    ```bash
+    npm run dev
+    ```
+
+4.  Open your browser to the local URL provided (usually `http://localhost:5173`).
+
+## 📂 Project Structure
+
+This project follows a standard Vite + React directory structure:
+
+```text
+Tree-visualizer/
+├── node_modules/      # Project dependencies
+├── public/            # Static assets
+├── src/
+│   ├── assets/        # Images and icons
+│   ├── App.css        # Component level styles
+│   ├── App.jsx        # Main application component (Contains Tree Logic)
+│   ├── index.css      # Global styles (Contains Tree Connector CSS)
+│   └── main.jsx       # React Entry point
+├── .gitignore         # Git ignore rules
+├── eslint.config.js   # Linting configuration
+├── index.html         # HTML entry point
+├── package.json       # Dependencies and scripts
+└── vite.config.js     # Vite configuration
